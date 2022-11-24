@@ -6,7 +6,5 @@ using CSharpFinalProject;
 
 Random rnd = new Random();
 
-
-
 string str = RndString.ReturnRndString(rnd, 10);
 Console.WriteLine(str);
