@@ -16,13 +16,13 @@ static string[] RandomStringArray(RndString rndStr, Random rnd, int maxValue)
 	return resultArr;
 }
 
-static string[] ThreeOrLessValueString(string[] str)
+static string[] ThreeOrLessValueString(string[] str, int strLength)
 {
 	string[] resultArr = new string[str.Length];
 
 	for (int i = 0; i < str.Length; i++)
 	{
-		if (str[i].Length <= 3)
+		if (str[i].Length <= strLength)
 		{
 			resultArr[i] = str[i];
 		}
@@ -45,7 +45,7 @@ static void PrintArray(string[] str)
 Random rnd = new Random();
 RndString rndStr = new RndString();
 string[] str = RandomStringArray(rndStr, rnd, 100);
-string[] resStr = ThreeOrLessValueString(str);
+string[] resStr = ThreeOrLessValueString(str,3);
 
 PrintArray(str);
 PrintArray(resStr);
