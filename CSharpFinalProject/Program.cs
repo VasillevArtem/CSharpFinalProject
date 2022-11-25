@@ -38,6 +38,7 @@ static void PrintArray(string[] str)
         Console.Write(string.Join(", ", str));
     }
     Console.WriteLine();
+    Console.WriteLine();
 }
 
 
