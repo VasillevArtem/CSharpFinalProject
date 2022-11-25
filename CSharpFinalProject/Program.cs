@@ -4,7 +4,47 @@
 
 using CSharpFinalProject;
 
-Random rnd = new Random();
 
-string str = RndString.ReturnRndString(rnd, 10);
-Console.WriteLine(str);
+static string[] RandomStringArray(RndString rndStr, Random rnd, int maxValue)
+{
+	string[] resultArr = new string[rnd.Next(1, maxValue)];
+
+	for (int i = 0; i < resultArr.Length; i++)
+	{
+		resultArr[i] = rndStr.ReturnRndString(rnd, maxValue / 10);
+	}
+	return resultArr;
+}
+
+static string[] ThreeOrLessValueString(string[] str)
+{
+	string[] resultArr = new string[str.Length];
+
+	for (int i = 0; i < str.Length; i++)
+	{
+		if (str[i].Length <= 3)
+		{
+			resultArr[i] = str[i];
+		}
+	}
+	resultArr = resultArr.Where(x => !string.IsNullOrEmpty(x)).ToArray();
+
+    return resultArr;
+}
+
+
+
+Random rnd = new Random();
+RndString rndStr = new RndString();
+string[] str = RandomStringArray(rndStr, rnd, 100);
+string[] resStr = ThreeOrLessValueString(str);
+
+foreach (var item in str)
+{
+	Console.WriteLine(item);
+}
+Console.WriteLine();
+foreach (var item in resStr)
+{
+    Console.WriteLine(item);
+}
