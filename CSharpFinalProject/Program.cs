@@ -31,7 +31,14 @@ static string[] ThreeOrLessValueString(string[] str)
 
     return resultArr;
 }
-
+static void PrintArray(string[] str)
+{
+    foreach (var item in str)
+    {
+        Console.Write(string.Join(", ", str));
+    }
+    Console.WriteLine();
+}
 
 
 Random rnd = new Random();
@@ -39,12 +46,8 @@ RndString rndStr = new RndString();
 string[] str = RandomStringArray(rndStr, rnd, 100);
 string[] resStr = ThreeOrLessValueString(str);
 
-foreach (var item in str)
-{
-	Console.WriteLine(item);
-}
-Console.WriteLine();
-foreach (var item in resStr)
-{
-    Console.WriteLine(item);
-}
+PrintArray(str);
+PrintArray(resStr);
+
+
+
