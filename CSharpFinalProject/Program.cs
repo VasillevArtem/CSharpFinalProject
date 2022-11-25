@@ -4,7 +4,7 @@
 
 using CSharpFinalProject;
 
-
+//Метод для создания массива случайного размера и заполнения массива случайными значениями.
 static string[] RandomStringArray(RndString rndStr, Random rnd, int maxValue)
 {
 	string[] resultArr = new string[rnd.Next(1, maxValue)];
@@ -16,6 +16,7 @@ static string[] RandomStringArray(RndString rndStr, Random rnd, int maxValue)
 	return resultArr;
 }
 
+//Метод для формирования массива с элементами размер которых меньше либо равен strLength (по условию задачи равно 3).
 static string[] ThreeOrLessValueString(string[] str, int strLength)
 {
 	string[] resultArr = new string[str.Length];
@@ -31,6 +32,8 @@ static string[] ThreeOrLessValueString(string[] str, int strLength)
 
     return resultArr;
 }
+
+//Метод для вывода массива в консоль.
 static void PrintArray(string[] str)
 {
     foreach (var item in str)
