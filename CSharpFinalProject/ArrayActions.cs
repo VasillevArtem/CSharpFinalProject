@@ -40,7 +40,20 @@ namespace CSharpFinalProject
         //Метод для вывода массива в консоль.
         internal static void PrintArray(string[] str)
         {
-            Console.Write(string.Join(", ", str));
+            for (int i = 0; i < str.Length; i++)
+            {
+                if (i == 0)
+                {
+                    Console.Write("{");
+                }
+                Console.Write(str[i]);
+                if (str.Length > i + 1)
+                {
+                    Console.Write(", ");
+                }
+            }
+            Console.Write("}");
+            //Console.Write(string.Join(", ", str));
             Console.WriteLine();
             Console.WriteLine();
         }
