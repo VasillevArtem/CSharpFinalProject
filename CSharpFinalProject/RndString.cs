@@ -14,13 +14,13 @@ namespace CSharpFinalProject
          /// <param name="rand"> Объект класса Random.</param>
          /// <param name="maxValue">Максимальное значение длинны слова.</param>
          /// <returns>Строку заполненную случайными значениями.</returns>
-        internal string ReturnRndString(Random rand, int maxValue)
+        internal string ReturnRndString(Random rnd, int maxValue)
         {
-            char[] chars = new char[rand.Next(1, maxValue)];
+            char[] chars = new char[rnd.Next(1, maxValue)];
 
             for (int i = 0; i < chars.Length; i++)
             {
-                chars[i] = (char)rand.Next(0x0410, 0x44F);
+                chars[i] = (char)rnd.Next(0x0410, 0x44F);
             }
             return new string(chars);
         }

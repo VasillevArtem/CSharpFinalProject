@@ -7,12 +7,14 @@ using CSharpFinalProject;
 
 Random rnd = new Random(); //Инициализация обьекта класса Random, используемого  для создания строки и для создания массива.
 RndString rndStr = new RndString(); //Инициализация обьекта класса RndString, для создания случайной строки.
+int maxValue = 100; //Значение максимального размера для массива строк (для строки значение равно maxValue / 10, для уменьшения размера строки).
+int maxValueTrim = 3; //Значение длинны слова для итогового массива(заданно условием задачи).
 
-string[] str = ArrayActions.RandomStringArray(rndStr, rnd, 100); //Создание массива.
+string[] str = ArrayActions.RandomStringArray(rndStr, rnd, maxValue); //Создание массива.
 
 ArrayActions.PrintArray(str); //Вывод исходного массива в консоль.
 
-ArrayActions.PrintArray(ArrayActions.TrimStringArray(str, 3));//Вывод итогового массива строк, длинна которых меньше либо равна 3 символам.
+ArrayActions.PrintArray(ArrayActions.TrimStringArray(str, maxValueTrim));//Вывод итогового массива строк, длинна которых меньше либо равна 3 символам.
 
 
 
