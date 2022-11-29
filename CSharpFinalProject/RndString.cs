@@ -9,12 +9,12 @@ namespace CSharpFinalProject
     /// </summary>
      internal class RndString
      {   /// <summary>
-         /// 
+         /// Метод для генерации случайного размера слова от 1 до maxValue.
          /// </summary>
-         /// <param name="rand"> Объект класса Random для генерации случайного размера слова от 1 до maxValue.</param>
+         /// <param name="rand"> Объект класса Random.</param>
          /// <param name="maxValue">Максимальное значение длинны слова.</param>
          /// <returns>Строку заполненную случайными значениями.</returns>
-         internal string ReturnRndString(Random rand, int maxValue)
+        internal string ReturnRndString(Random rand, int maxValue)
          {
             char[] chars = new char[rand.Next(1, maxValue)];
 
