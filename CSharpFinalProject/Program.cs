@@ -4,51 +4,20 @@
 
 using CSharpFinalProject;
 
-//Метод для создания массива случайного размера и заполнения массива случайными значениями.
-static string[] RandomStringArray(RndString rndStr, Random rnd, int maxValue)
-{
-	string[] resultArr = new string[rnd.Next(1, maxValue)];
 
-	for (int i = 0; i < resultArr.Length; i++)
-	{
-		resultArr[i] = rndStr.ReturnRndString(rnd, maxValue / 10);
-	}
-	return resultArr;
-}
+Random rnd = new Random(); //Инициализация обьекта класса Random, используемого  для создания строки и для создания массива.
+RndString rndStr = new RndString(); //Инициализация обьекта класса RndString, для создания случайной строки.
 
-//Метод для формирования массива с элементами размер которых меньше либо равен strLength (по условию задачи равно 3).
-static string[] TrimStringArray(string[] str, int strLength)
-{
-	string[] resultArr = new string[str.Length];
+string[] str = ArrayActions.RandomStringArray(rndStr, rnd, 100);//Создание массива слу
 
-	for (int i = 0; i < str.Length; i++)
-	{
-		if (str[i].Length <= strLength)
-		{
-			resultArr[i] = str[i];
-		}
-	}
-	resultArr = resultArr.Where(x => !string.IsNullOrEmpty(x)).ToArray();
+ArrayActions.PrintArray(str); //Вывод исходного массива в консоль.
 
-    return resultArr;
-}
-
-//Метод для вывода массива в консоль.
-static void PrintArray(string[] str)
-{	
-   Console.Write(string.Join(", ", str));    
-   Console.WriteLine();
-   Console.WriteLine();
-}
+ArrayActions.PrintArray(ArrayActions.TrimStringArray(str, 3));//Вывод итогового массива строк длинна которых меньше либо равна 3 символам.
 
 
-Random rnd = new Random();
-RndString rndStr = new RndString();
-string[] str = RandomStringArray(rndStr, rnd, 100); 
-string[] resStr = TrimStringArray(str,3);
 
-PrintArray(str);
-PrintArray(resStr);
+
+
 
 
 

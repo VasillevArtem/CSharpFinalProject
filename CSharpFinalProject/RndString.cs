@@ -3,7 +3,8 @@
 //При решении не рекомендуется пользоваться коллекциями, лучше обойтись исключительно массивами.
 
 namespace CSharpFinalProject
-{   /// <summary>
+{   
+    /// <summary>
     /// Класс, предоставляющий функционал, связаный с случайно заполненой строкой.
     /// </summary>
      internal class RndString
@@ -12,7 +13,7 @@ namespace CSharpFinalProject
          /// </summary>
          /// <param name="rand"> Объект класса Random для генерации случайного размера слова от 1 до maxValue.</param>
          /// <param name="maxValue">Максимальное значение длинны слова.</param>
-         /// <returns></returns>
+         /// <returns>Строку заполненную случайными значениями.</returns>
          internal string ReturnRndString(Random rand, int maxValue)
          {
             char[] chars = new char[rand.Next(1, maxValue)];
