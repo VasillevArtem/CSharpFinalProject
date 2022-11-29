@@ -15,7 +15,7 @@ namespace CSharpFinalProject
          /// <param name="maxValue">Максимальное значение длинны слова.</param>
          /// <returns>Строку заполненную случайными значениями.</returns>
         internal string ReturnRndString(Random rand, int maxValue)
-         {
+        {
             char[] chars = new char[rand.Next(1, maxValue)];
 
             for (int i = 0; i < chars.Length; i++)
@@ -23,7 +23,7 @@ namespace CSharpFinalProject
                 chars[i] = (char)rand.Next(0x0410, 0x44F);
             }
             return new string(chars);
-         }
+        }
      }
 }
 
