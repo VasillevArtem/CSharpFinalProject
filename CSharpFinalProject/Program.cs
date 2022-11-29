@@ -17,7 +17,7 @@ static string[] RandomStringArray(RndString rndStr, Random rnd, int maxValue)
 }
 
 //Метод для формирования массива с элементами размер которых меньше либо равен strLength (по условию задачи равно 3).
-static string[] ThreeOrLessValueString(string[] str, int strLength)
+static string[] TrimStringArray(string[] str, int strLength)
 {
 	string[] resultArr = new string[str.Length];
 
@@ -35,20 +35,17 @@ static string[] ThreeOrLessValueString(string[] str, int strLength)
 
 //Метод для вывода массива в консоль.
 static void PrintArray(string[] str)
-{
-    foreach (var item in str)
-    {
-        Console.Write(string.Join(", ", str));
-    }
-    Console.WriteLine();
-    Console.WriteLine();
+{	
+   Console.Write(string.Join(", ", str));    
+   Console.WriteLine();
+   Console.WriteLine();
 }
 
 
 Random rnd = new Random();
 RndString rndStr = new RndString();
-string[] str = RandomStringArray(rndStr, rnd, 100);
-string[] resStr = ThreeOrLessValueString(str,3);
+string[] str = RandomStringArray(rndStr, rnd, 100); 
+string[] resStr = TrimStringArray(str,3);
 
 PrintArray(str);
 PrintArray(resStr);
