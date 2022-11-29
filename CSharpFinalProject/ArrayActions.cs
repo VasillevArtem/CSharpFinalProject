@@ -44,7 +44,7 @@ namespace CSharpFinalProject
             {
                 if (i == 0)
                 {
-                    Console.Write("{");
+                    Console.Write("[");
                 }
                 Console.Write(str[i]);
                 if (str.Length > i + 1)
@@ -52,8 +52,7 @@ namespace CSharpFinalProject
                     Console.Write(", ");
                 }
             }
-            Console.Write("}");
-            //Console.Write(string.Join(", ", str));
+            Console.Write("]");            
             Console.WriteLine();
             Console.WriteLine();
         }

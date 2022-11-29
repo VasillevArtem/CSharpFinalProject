@@ -8,11 +8,11 @@ using CSharpFinalProject;
 Random rnd = new Random(); //Инициализация обьекта класса Random, используемого  для создания строки и для создания массива.
 RndString rndStr = new RndString(); //Инициализация обьекта класса RndString, для создания случайной строки.
 
-string[] str = ArrayActions.RandomStringArray(rndStr, rnd, 100);//Создание массива слу
+string[] str = ArrayActions.RandomStringArray(rndStr, rnd, 100); //Создание массива.
 
 ArrayActions.PrintArray(str); //Вывод исходного массива в консоль.
 
-ArrayActions.PrintArray(ArrayActions.TrimStringArray(str, 3));//Вывод итогового массива строк длинна которых меньше либо равна 3 символам.
+ArrayActions.PrintArray(ArrayActions.TrimStringArray(str, 3));//Вывод итогового массива строк, длинна которых меньше либо равна 3 символам.
 
 
 
